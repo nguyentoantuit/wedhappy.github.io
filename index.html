@@ -21,6 +21,7 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/flip/flip.min.css" rel="stylesheet"/>
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -124,6 +125,43 @@
     </div>
     <!-- Video Modal End -->
 
+    <!-- Countdown -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Save the date</h6>
+                <h1 class="font-secondary display-4"></h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <div class="tick" data-did-init="handleTickInit">
+                            <div
+                                data-repeat="true"
+                                data-layout="horizontal center fit"
+                                data-transform="preset(d, h, m, s) -> delay"
+                            >
+                                <div class="tick-group">
+                                    <div
+                                        data-key="value"
+                                        data-repeat="true"
+                                        data-transform="pad(00) -> split -> delay"
+                                    >
+                                        <span data-view="flip"></span>
+                                    </div>
+                    
+                                    <span data-key="label" data-view="text" class="tick-label"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
 
     <!-- About Start -->
     <div class="container-fluid py-5" id="about">
@@ -497,7 +535,7 @@
             </div>
             <div class="d-flex justify-content-center mb-4">
                 <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.facebook.com/exogiaunguyen"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square" href="https://www.instagram.com/exogiaunguyen/?igsh=ZXhrbWhxdGphajQ5"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="d-flex justify-content-center py-2">
                 <p class="text-white" href="#">nguyentoanuit@gmail.com</p>
@@ -527,6 +565,7 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
+    <script src="lib/flip/flip.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

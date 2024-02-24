@@ -112,6 +112,12 @@
             }
         }
     });
-    
 })(jQuery);
 
+function handleTickInit(tick) {
+    var weddingDate = new Date('2024-04-20 19:00:00');
+
+    Tick.count.down(weddingDate + '-01-01').onupdate = function (value) {
+        tick.value = value;
+    };
+}

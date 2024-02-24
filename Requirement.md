@@ -18,3 +18,9 @@ Code example:
 ## 3. Ban mắc đi với ai?
 - Một mình lẻ bóng
 - Hên quá tui có người yêu
+
+
+## 4. Store data
+https://github.com/Varshithvhegde/Contact_Form_Using_Google_Sheets?tab=readme-ov-file
+Example: https://docs.google.com/spreadsheets/d/117qsaEFQLenUyr6RPyYMPYJtkur_7vBK_NA9hepH6xQ/edit#gid=0
+https://github.com/faltastic/sheetr
