@@ -1,4 +1,4 @@
-var weddingDateTime = new Date('2024-04-20 19:00:00');
+var weddingDateTime = new Date('2024-03-30 19:00:00');
 
 (function ($) {
     "use strict";
