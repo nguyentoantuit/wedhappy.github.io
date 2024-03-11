@@ -1,4 +1,4 @@
-var weddingDateTime = new Date('2024-03-30 19:00:00');
+
 
 (function ($) {
     "use strict";
@@ -36,7 +36,7 @@ var weddingDateTime = new Date('2024-03-30 19:00:00');
         $('.btn-play').click(function () {
             $videoSrc = $(this).data("src");
         });
-        console.log($videoSrc);
+        // console.log($videoSrc);
 
         $('#videoModal').on('shown.bs.modal', function (e) {
             $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
@@ -116,8 +116,30 @@ var weddingDateTime = new Date('2024-03-30 19:00:00');
     });
 })(jQuery);
 
+   
 function handleTickInit(tick) {
-    Tick.count.down(weddingDateTime + '-01-01').onupdate = function (value) {
+    // Uncomment to set labels to different language ( in this case Dutch )
+    var locale = {
+        DAY_PLURAL: ' ',
+        DAY_SINGULAR: ' ',
+        HOUR_PLURAL: ' ',
+        HOUR_SINGULAR: ' ',
+        MINUTE_PLURAL: ' ',
+        MINUTE_SINGULAR: ' ',
+        SECOND_PLURAL: ' ',
+        SECOND_SINGULAR: ' ',
+        MILLISECOND_PLURAL: ' ',
+        MILLISECOND_SINGULAR: ''
+    };
+
+    for (var key in locale) {
+        if (!locale.hasOwnProperty(key)) { continue; }
+        tick.setConstant(key, locale[key]);
+    }
+
+    var nextYear = new Date().getFullYear() + 1;
+
+    Tick.count.down('2024-03-30 19:00:00').onupdate = function (value) {
         tick.value = value;
     };
 }

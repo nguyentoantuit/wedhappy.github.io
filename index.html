@@ -171,13 +171,15 @@
             </div>
 
             <div class="row justify-content-center wedding-timeline">
-                    <div class="col-md-6 p-0" style="min-height: 400px; margin-right: 22px;">
-                        <img class="position-absolute w-100 h-100" src="img/timeline-wedding.jpg" style="object-fit: cover;">
-                    </div>
+                <div class="col-md-6 p-0" style="min-height: 400px; margin-right: 22px;">
+                    <img class="position-absolute w-100 h-100" src="img/timeline-wedding.jpg"
+                        style="object-fit: cover;">
+                </div>
             </div>
 
         </div>
     </div>
+   
     <!-- Event End -->
 
     <!-- About Start -->
@@ -464,19 +466,21 @@
                             <div class="form-row">
                                 <div class="form-group col-sm-12">
                                     <input type="text" name="Name" class="form-control bg-secondary border-0 py-4 px-3"
-                                        placeholder="Tên" required="required"/>
+                                        placeholder="Tên" required="required" />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" required="required" name="Join" style="height: 52px;">
+                                    <select class="form-control bg-secondary border-0" required="required" name="Join"
+                                        style="height: 52px;">
                                         <option>Bạn tham dự được chứ?</option>
                                         <option>Mắc đi lắm rồi</option>
                                         <option>Không đu idol được rồi</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" required="required" name="Guests" style="height: 52px;" >
+                                    <select class="form-control bg-secondary border-0" required="required" name="Guests"
+                                        style="height: 52px;">
                                         <option>Số người tham dự</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -491,18 +495,20 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <div class="text-center">
-                                        <p id="rsvp-confirmation-msg">Để thuận tiện cho việc sắp xếp chỗ ngồi, xin hãy xác nhận sự có mặt của bạn để
+                                        <p id="rsvp-confirmation-msg">Để thuận tiện cho việc sắp xếp chỗ ngồi, xin hãy
+                                            xác nhận sự có mặt của bạn để
                                             chúng mình chuẩn bị đón tiếp một cách chu đáo nhất nhé!</p>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <button id="rsvp-submit-btn" class="btn btn-primary font-weight-bold py-3 px-5" type="submit">
+                                <button id="rsvp-submit-btn" class="btn btn-primary font-weight-bold py-3 px-5"
+                                    type="submit">
                                     <span>Zô</span>
                                 </button>
                                 <div id="rsvp-spinner" class="spinner-border" role="status" style="display: none;">
                                     <span class="sr-only">Loading...</span>
-                                  </div>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -510,23 +516,23 @@
             </div>
         </div>
     </div>
-    
+
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbypfoPa4y3UfGW6GSbxUzpZc4wSrL1BO1ReVrfao260fAnoc316n212nISGPe8beedA/exec'
         const form = document.forms['rsvp-form']
-      
+
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          $("#rsvp-submit-btn").hide();
-          $("#rsvp-spinner").show();
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response =>{
-                $("#rsvp-confirmation-msg").text("Cảm ơn bạn đã xác nhận thông tin!");
-                $("#rsvp-spinner").hide();
-            } )
-            .catch(error => console.error('Error!', error.message))
-         });
-      </script>
+            e.preventDefault()
+            $("#rsvp-submit-btn").hide();
+            $("#rsvp-spinner").show();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    $("#rsvp-confirmation-msg").text("Cảm ơn bạn đã xác nhận thông tin!");
+                    $("#rsvp-spinner").hide();
+                })
+                .catch(error => console.error('Error!', error.message))
+        });
+    </script>
 
     <!-- RSVP End -->
 
