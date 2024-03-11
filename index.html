@@ -192,7 +192,7 @@
                 <div class="col-md-6 p-0 text-center text-md-right">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <h3 class="mb-3">Chàng trai ấy</h3>
-                        <p>Nguyễn Hữu Toàn, Là một người hiền lành và ít nói. Luôn coi trọng tình cảm và
+                        <p>Nguyễn Hữu Toàn, là một người hiền lành và ít nói. Luôn coi trọng tình cảm và
                             yêu thương gia đình. Với anh: “Gia đình là điểm tựa vững chắc nhất và là bến đỗ bình yên
                             không đâu sánh bằng đối với mỗi con người.”</p>
                         <h3 class="font-secondary font-weight-normal text-muted mb-3"><i
@@ -491,13 +491,18 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <div class="text-center">
-                                        <p>Để thuận tiện cho việc sắp xếp chỗ ngồi, xin hãy xác nhận sự có mặt của bạn để
+                                        <p id="rsvp-confirmation-msg">Để thuận tiện cho việc sắp xếp chỗ ngồi, xin hãy xác nhận sự có mặt của bạn để
                                             chúng mình chuẩn bị đón tiếp một cách chu đáo nhất nhé!</p>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Zô</button>
+                                <button id="rsvp-submit-btn" class="btn btn-primary font-weight-bold py-3 px-5" type="submit">
+                                    <span>Zô</span>
+                                </button>
+                                <div id="rsvp-spinner" class="spinner-border" role="status" style="display: none;">
+                                    <span class="sr-only">Loading...</span>
+                                  </div>
                             </div>
                         </form>
                     </div>
@@ -505,16 +510,22 @@
             </div>
         </div>
     </div>
+    
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbypfoPa4y3UfGW6GSbxUzpZc4wSrL1BO1ReVrfao260fAnoc316n212nISGPe8beedA/exec'
         const form = document.forms['rsvp-form']
       
         form.addEventListener('submit', e => {
           e.preventDefault()
+          $("#rsvp-submit-btn").hide();
+          $("#rsvp-spinner").show();
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
+            .then(response =>{
+                $("#rsvp-confirmation-msg").text("Cảm ơn bạn đã xác nhận thông tin!");
+                $("#rsvp-spinner").hide();
+            } )
             .catch(error => console.error('Error!', error.message))
-        })
+         });
       </script>
 
     <!-- RSVP End -->

@@ -24,3 +24,6 @@ Code example:
 https://github.com/Varshithvhegde/Contact_Form_Using_Google_Sheets?tab=readme-ov-file
 Example: https://docs.google.com/spreadsheets/d/117qsaEFQLenUyr6RPyYMPYJtkur_7vBK_NA9hepH6xQ/edit#gid=0
 https://github.com/faltastic/sheetr
+
+
+URL: https://script.google.com/macros/s/AKfycbypfoPa4y3UfGW6GSbxUzpZc4wSrL1BO1ReVrfao260fAnoc316n212nISGPe8beedA/exec
