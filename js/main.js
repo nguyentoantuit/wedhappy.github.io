@@ -112,7 +112,8 @@
             1200:{
                 items:5
             }
-        }
+        },
+        lazyLoad: true
     });
 })(jQuery);
 
