@@ -114,7 +114,7 @@
             }
         },
         lazyLoad: true,
-        lazyLoadEager: 4
+        lazyLoadEager: 2
     });
 })(jQuery);
 
