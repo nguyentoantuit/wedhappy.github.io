@@ -113,7 +113,8 @@
                 items:5
             }
         },
-        lazyLoad: true
+        lazyLoad: true,
+        lazyLoadEager: 4
     });
 })(jQuery);
 
